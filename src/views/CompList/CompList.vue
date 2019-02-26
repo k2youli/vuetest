@@ -1,17 +1,23 @@
 <template>
   <div>
     <div class="comp-list">
-      <div class="list-item" v-for="(item, key) in cards" :key="key">
-      <Card style="width:320px;margin:0 auto;">
+      <div
+        class="list-item"
+        v-for="(item, key) in cards"
+        :key="key">
+        <Card style="width:320px;margin:0 auto;">
           <div style="text-align:center">
-              <img src="@/assets/logo.png">
-              <h3>{{item}}</h3>
+            <img src="@/assets/logo.png">
+            <h3>{{ item }}</h3>
           </div>
-      </Card>
+        </Card>
       </div>
     </div>
     <footer>
-      <Button ghost type="success" @click="navigateToHome">
+      <Button
+        ghost
+        type="success"
+        @click="navigateToHome">
         返回首页
       </Button>
     </footer>
@@ -22,25 +28,25 @@
 import { Card, Button } from 'iview'
 
 export default {
-  name: 'CompList',
-  data () {
-    return {
-      cards: [
-        '导航组件',
-        '数据查询',
-        '用户列表'
-      ]
-    }
-  },
-  components: {
-    Card,
-    Button
-  },
-  methods: {
-    navigateToHome () {
-      this.$router.push('/')
-    }
-  }
+	name: 'CompList',
+	components: {
+		Card,
+		Button
+	},
+	data () {
+		return {
+			cards: [
+				'导航组件',
+				'数据查询',
+				'用户列表'
+			]
+		}
+	},
+	methods: {
+		navigateToHome () {
+			this.$router.push('/')
+		}
+	}
 }
 </script>
 <style lang="scss" scoped>
