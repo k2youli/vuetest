@@ -6,8 +6,8 @@
       <Button
         ghost
         type="success"
-        @click="navigateToCompList">
-        已有组件
+        @click="navigateToAnotherPage">
+        去往另一个页面
       </Button>
     </footer>
   </div>
@@ -25,8 +25,8 @@ export default {
 		Button
 	},
 	methods: {
-		navigateToCompList () {
-			this.$router.push('/kmx-comps')
+		navigateToAnotherPage () {
+			this.$router.push('/another-page')
 		}
 	}
 }
